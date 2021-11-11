@@ -21,14 +21,14 @@ const RideSelector = ({pickupCoordinates, dropoffCoordinates}) => {
             <Title>Choose a ride, or swipe up for more</Title>
             <CarList>
                 {/* loop through the car data */}
-                {carList.map((car)=>(
-                    <Car>
+                {carList.map((car, index)=>(
+                    <Car key={index}>
                     <CarImage src={car.imgUrl}></CarImage>
                     <CarDetails>
                     <Service> {car.service}</Service>
                     <Time> 5 Min away</Time>
                     </CarDetails>
-                    <Price>${(rideDuration * car.multiplier).toFixed(2)}</Price>
+                    <Price>{"$" + (rideDuration * car.multiplier).toFixed(2)}</Price>
                 </Car>
                 ))}
 

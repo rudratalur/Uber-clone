@@ -40,7 +40,7 @@ const UberLogo = tw.img`
 h-20 w-auto self-start object-contain`
 
 const HeaderImage = tw.img`
-object-contain w-full`
+object-contain w-full h-80`
 
 const Wrapper = tw.div`
 flex flex-col h-screen bg-gray-200 p-4
